@@ -2,8 +2,7 @@
 
 set -eu
 pwd
-ls
+ls git-repo
 echo 'Hello from build script'
-./git-repo/realbuild.sh &> /dev/stdout | tee jenkins.txt
-exit 0
+${pwd}/git-repo/realbuild.sh &> /dev/stdout | tee jenkins.txt
 
