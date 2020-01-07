@@ -1,8 +1,8 @@
 #!/bin/sh
 
 set -eu
-pwd
+PWS=`pwd`
 ls git-repo
 echo 'Hello from build script'
-${pwd}/git-repo/realbuild.sh &> /dev/stdout | tee jenkins.txt
+$PWD/git-repo/realbuild.sh &> /dev/stdout | tee jenkins.txt
 
